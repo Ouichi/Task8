@@ -1,2 +1,2 @@
-#  ‚±‚ÌƒvƒƒWƒFƒNƒg‚É‚Â‚¢‚Ä
-‚±‚ÌƒvƒƒWƒFƒNƒg‚Å‚Í Spring Boo t‚Æ MySQL ‚ð—p‚¢‚½ŠÈ’PReadˆ—‚ð‚·‚éAPI‚ðŽÀ‘•‚µ‚Ü‚·B
+#  ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã¤ã„ã¦
+ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã§ã¯ Spring Boo tã¨ MySQL ã‚’ç”¨ã„ãŸç°¡å˜Readå‡¦ç†ã‚’ã™ã‚‹APIã‚’å®Ÿè£…ã—ã¾ã™
