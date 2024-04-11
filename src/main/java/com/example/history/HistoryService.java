@@ -31,12 +31,5 @@ public class HistoryService {
 
     public History findHistory(int id){
         return historyMapper.findById(id).orElseThrow(() -> new HistoryNotFoundException("History not found"));
-//        Optional<History> history = historyMapper.findById(id);
-//        if (history.isPresent()){
-//            return history.get();
-//        }
-//        else{
-//            throw new HistoryNotFoundException("History not found");
-//        }
     }
 }
