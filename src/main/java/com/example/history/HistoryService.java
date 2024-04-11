@@ -14,26 +14,29 @@ public class HistoryService {
         this.historyMapper=historyMapper;
     }
 
-    public List<History>findByStartingAndEnding(String prefix, String suffix){
-        return historyMapper.findByStartingAndEnding(prefix,suffix);
+    public List<History> findByYearAndArea(String areaStartsWith, String yearEndsWith){
+        if (areaStartsWith != null && yearEndsWith != null) {
+            return historyMapper.findByYearAndArea(areaStartsWith, yearEndsWith);
+        }
+        else if (areaStartsWith != null) {
+            return historyMapper.findByAreaStartingWith(areaStartsWith);
+        }
+        else if (yearEndsWith != null) {
+            return historyMapper.findByYearEndingWith(yearEndsWith);
+        }
+        else {
+            return historyMapper.findAll();
+        }
     }
-    public List<History>findByAreaStartingWith(String prefix){
-        return historyMapper.findByAreaStartingWith(prefix);
-    }
-    public List<History>findByYearEndingWith(String suffix){
-        return historyMapper.findByYearEndingWith(suffix);
-    }
-    public List<History>findAll(){
-        return historyMapper.findAll();
-    }
+
     public History findHistory(int id){
-//        return historyMapper.findById(id).orElseThrow(() -> new IllegalArgumentException("ID not found"));
-        Optional<History> history = historyMapper.findById(id);
-        if (history.isPresent()){
-            return history.get();
-        }
-        else{
-            throw new HistoryNotFoundException("History not found");
-        }
+        return historyMapper.findById(id).orElseThrow(() -> new HistoryNotFoundException("History not found"));
+//        Optional<History> history = historyMapper.findById(id);
+//        if (history.isPresent()){
+//            return history.get();
+//        }
+//        else{
+//            throw new HistoryNotFoundException("History not found");
+//        }
     }
 }
